@@ -1,0 +1,35 @@
+# menampilkan semua note di table notes
+GET http://localhost:3000/notes
+Content-type: application/json;
+
+###
+# menambahkan note baru
+POST http://localhost:3000/notes
+Content-Type: application/json
+
+{
+    "tittle" : "tugas",
+    "date_time" : "2024/05/31 00:10:00",
+    "note": "gaboleh nyontek ya"
+}
+
+###
+# menampilkan note berdasarkan id (ubah aja angka dibelakang / untuk id nya)
+GET http://localhost:3000/notes/1
+Content-Type: application/json
+
+###
+# melakukan update berdasarkan id (ubah aja angka dibelakang / untuk id nya)
+PUT http://localhost:3000/notes/1
+Content-Type: application/json
+
+{
+    "tittle" : "belajar API CRUD",
+    "date_time" : "2024/06/01 12:38:00",
+    "note" : "gara gara ngerjain ini, aku ga soljum astaghfirullah"
+}
+
+###
+# melakukan delete berdasarkan id (ubah aja angka dibelakang / untuk id nya)
+DELETE http://localhost:3000/notes/3
+Content-Type: application/json
