@@ -9,8 +9,11 @@ const app = express();
 app.use(express.json());
 app.use(router);
 
-app.use(express.json());
+app.get("/", (req, res) => {
+  return res.json("server side is working");
+});
+
 app.listen(process.env.PORT, async () => {
   await connection();
-  console.log(`https://localhost:${process.env.PORT}`);
+  console.log(`http://localhost:${process.env.PORT}`);
 });
